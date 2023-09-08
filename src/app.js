@@ -4,5 +4,5 @@ import dataRouter from './routes/data.routes.js';
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.use('', dataRouter);
+app.use('/data', dataRouter);
 export default app;

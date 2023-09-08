@@ -3,7 +3,6 @@ import app from './app.js';
 import schedule from 'node-schedule';
 import { addData } from './utils/util.js';
 
-
 const runServer = async () => {
 	try {
 		await mongoose.connect('mongodb+srv://coderkuchkarov:ulugbek2004@cluster0.bxpph60.mongodb.net/data?retryWrites=true&w=majority');
@@ -14,8 +13,6 @@ const runServer = async () => {
 		console.log(error);
 	}
 };
-
-
-addData()
-schedule.scheduleJob('0 9 * * * *', addData);
+addData();
+schedule.scheduleJob('1 1 * * * * *', addData);
 runServer();
