@@ -14,5 +14,5 @@ const runServer = async () => {
 	}
 };
 addData();
-schedule.scheduleJob('1 1 * * * * *', addData);
+schedule.scheduleJob('0 30 * * * * *', addData);
 runServer();
